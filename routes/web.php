@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Nesk\Puphpeteer\Puppeteer;
+use App\Http\Controllers\MessageController;
 
 
 /*
@@ -15,8 +15,5 @@ use Nesk\Puphpeteer\Puppeteer;
 |
 */
 
-Route::get('/', function () {
-    
-    return view('welcome');
+Route::get('/', [MessageController::class, 'homePage']);
 
-});
